@@ -22,7 +22,7 @@ export default function TextEditor() {
   let { id: documentId } = useParams();
 
   useEffect(() => {
-    const s = io("http://localhost:3001");
+    const s = io(":5000");
     setSocket(s);
     return () => {
       s.disconnect();

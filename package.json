@@ -5,8 +5,8 @@
   "scripts": {
     "start-client": "react-scripts start",
     "build": "react-scripts build && (cd server && yarn install)",
-    "startLocal": "(cd server && npm run local)",
-    "start": "cd server && npm run start",
+    "startLocal": "(cd server && yarn local)",
+    "start": "cd server && yarn start",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -15,7 +15,7 @@
     "url": "git+https://github.com/incari/google-docs-clone.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Martin Racana",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/incari/google-docs-clone/issues"
