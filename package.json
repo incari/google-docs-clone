@@ -1,0 +1,22 @@
+{
+  "name": "googledocsclone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "(cd server && npm run serverStart)",
+    "client": "(cd client && npm run start)",
+    "startAll": "npm run client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/incari/google-docs-clone.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/incari/google-docs-clone/issues"
+  },
+  "homepage": "https://github.com/incari/google-docs-clone#readme"
+}
