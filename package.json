@@ -21,5 +21,12 @@
   "homepage": "https://github.com/incari/google-docs-clone#readme",
   "engines": {
     "node": "15.13"
+  },
+  "dependencies": {
+    "mongoose": "^5.12.5",
+    "socket.io": "^4.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
   }
 }
