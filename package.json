@@ -21,7 +21,7 @@
     "url": "https://github.com/incari/google-docs-clone/issues"
   },
   "engines": {
-    "node": "15.13"
+    "node": "14.x"
   },
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
