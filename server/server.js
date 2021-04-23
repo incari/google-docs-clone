@@ -1,9 +1,30 @@
 const mongoose = require("mongoose");
 const Document = require("./Document");
+const cors = require("cors")
 
-const PORT = 5000;
+const express = require("express");
+const app = express();
+const server = require("http").createServer(app);
 
-//mongoose.connect("mongodb://localhost/google-docs-clone", {
+/* const { Server } = require("socket.io");
+const io = new Server(server);
+ */
+
+app.use(express.static(__dirname+'../build'))
+
+ const io = require("socket.io")(server, {
+  cors: {
+    origin: "*",
+    methods: ["GET", "POST"],
+  },
+}); 
+
+const PORT = 3001
+
+ server.listen(PORT, () => {
+  console.log("connected to port:"+ PORT);
+}); 
+
 mongoose.connect(
   "mongodb+srv://incari:INfBFdMvo9JdWrJW@cluster0.uvpq5.mongodb.net/docsclone?retryWrites=true&w=majority",
   {
@@ -14,20 +35,10 @@ mongoose.connect(
   }
 );
 
-/* const io = require("socket.io")(3001, {
-  cors: {
-    origin: "http://localhost:3000",
-    methods: ["GET", "POST"],
-  },
-}); */
-
- const io = require("socket.io")(PORT, { cors: { origins: "*:*" } });
-
-
- const defaultValue = "";
+const defaultValue = "";
 
 io.on("connection", (socket) => {
-  console.log("connected");
+  console.log("New Client connected");
   socket.on("get-document", async (documentId) => {
     const document = await findOrCreateDocument(documentId);
     socket.join(documentId);

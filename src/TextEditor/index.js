@@ -22,7 +22,8 @@ export default function TextEditor() {
   let { id: documentId } = useParams();
 
   useEffect(() => {
-    const s = io();
+    const s = io("http://192.168.1.56:3001");
+    //const s = io("/");
     setSocket(s);
     return () => {
       s.disconnect();
