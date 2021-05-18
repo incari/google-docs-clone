@@ -7,3 +7,7 @@ I'm usign QUILLJS editor that have a tons of features that can make a great text
 Socket.io for communication in web socket integrations and real time connections between our clients and server c
 
 uuid Package to get a random uuid code for each document
+
+Preview:
+
+![Docs preview](https://github.com/incari/google-docs-clone/blob/main/docs-clone.gif?raw=true)
