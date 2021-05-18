@@ -10,4 +10,4 @@ uuid Package to get a random uuid code for each document
 
 Preview:
 
-![Docs preview](https://github.com/incari/google-docs-clone/blob/main/public/docs-clone.gif?raw=true)
+![Docs preview](https://user-images.githubusercontent.com/11413854/118664117-7dc50f80-b7f1-11eb-803c-c3e1510a883c.gif)
